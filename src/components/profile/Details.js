@@ -64,7 +64,7 @@ class Details extends React.Component {
         <div className="pet-gallery">
           <Carousel media={media}/>
         </div>
-        <div className="pet-info alert alert-danger">
+        <div className="pet-details alert alert-danger">
           <h1>{name}</h1>
           <p>
             {animal} - {breed} - {location}
@@ -84,8 +84,8 @@ class Details extends React.Component {
                   </button>
                 </div>
                 <div className="modal-footer">
-                  <button type="button" className="btn badge-success" data-dismiss="modal">YES</button>
-                  <button type="button" className="btn btn-primary" data-dismiss="modal">DEFINITELY YES</button>
+                  <button type="button" className="btn btn-danger" data-dismiss="modal">YES</button>
+                  <button type="button" className="btn btn-danger" data-dismiss="modal">DEFINITELY YES</button>
                 </div>
               </div>
             </div>

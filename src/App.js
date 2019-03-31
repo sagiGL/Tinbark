@@ -1,11 +1,12 @@
-import React, {Component} from "react";
-import { Link, Router } from "@reach/router";
-import Results from "./Results";
-import Details from "./Details";
-import SearchParams from "./SearchParams";
+import React, { Component } from "react";
+import { Router } from "@reach/router";
+import Results from "./components/results/Results";
+import Details from "./components/profile/Details";
+import SearchParams from "./components/results/SearchParams";
 import pf from "petfinder-client";
-import { Provider } from "./SearchContext";
+import { Provider } from "./components/results/SearchContext";
 import "./App.css";
+import Header from "./components/header/header";
 
 // const petfinder = pf({
 //     key: process.env.API_KEY,
@@ -65,9 +66,7 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <header className="header">
-                    <Link to="/"><div className="app-title ">Tinbark️<img className="title-logo" src="http://i.imgur.com/1tqBeLA.png" alt="red pow"/></div></Link>
-                </header>
+                <Header/>
                 <Provider value={this.state}>
                     <Router>
                         <Results path="/" />

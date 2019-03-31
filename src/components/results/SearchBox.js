@@ -11,7 +11,13 @@ class SearchBox extends Component {
     return (
       <Consumer>
         {context => (
-          <form onSubmit={this.handleFormSubmit}>
+            <div>
+                <a className="btn btn-danger toggle-search-mobile" data-toggle="collapse" href="#search-collapse" role="button"
+                   aria-expanded="true" aria-controls="search-collapse">
+                    🔎
+                </a>
+            <div className="collapse" id='search-collapse'>
+          <form className="container-fluid" onSubmit={this.handleFormSubmit}>
             <div className="form-row">
               <div className="form-group col-md-2">
                 <label className="search-label" htmlFor="location">
@@ -39,7 +45,8 @@ class SearchBox extends Component {
               </div>
             </div>
           </form>
-
+            </div>
+            </div>
         )}
       </Consumer>
     );

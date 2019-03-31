@@ -14,7 +14,7 @@ class Results extends React.Component {
     super(props);
     this.state = {
         loading:true,
-      pets: []
+        pets: []
     };
   }
 
@@ -60,27 +60,29 @@ class Results extends React.Component {
           return this.loadingAnimation;
       }
     return (
-      <div className="search">
-        <SearchBox search={this.search} />
-        {this.state.pets.map(pet => {
-          let breed;
+        <div className="search">
+          <SearchBox search={this.search}/>
+            <div className="scrollable-menu search-results">
+            {this.state.pets.map(pet => {
+                let breed;
 
-          breed = Array.isArray(pet.breeds.breed)
-            ? pet.breeds.breed.join(", ")
-            : pet.breeds.breed;
-          return (
-            <Pet
-              key={pet.id}
-              name={pet.name}
-              animal={pet.animal}
-              breed={breed}
-              media={pet.media}
-              location={`${pet.contact.city}, ${pet.contact.state}`}
-              id={pet.id}
-            />
-          );
-        })}
-      </div>
+                breed = Array.isArray(pet.breeds.breed)
+                    ? pet.breeds.breed.join(", ")
+                    : pet.breeds.breed;
+                return (
+                    <Pet
+                        key={pet.id}
+                        name={pet.name}
+                        animal={pet.animal}
+                        breed={breed}
+                        media={pet.media}
+                        location={`${pet.contact.city}, ${pet.contact.state}`}
+                        id={pet.id}
+                    />
+                );
+            })}
+            </div>
+        </div>
     );
   }
 }

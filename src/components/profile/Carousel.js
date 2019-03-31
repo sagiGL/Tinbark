@@ -10,14 +10,8 @@ class Carousel extends React.Component {
     if (media && media.photos && media.photos.photo) {
       photos = media.photos.photo.filter(photo => photo["@size"] === "pn");
     }
-
     return { photos };
   }
-  handleIndexClick = event => {
-    this.setState({
-      active: +event.target.dataset.index
-    });
-  };
   render() {
     const { photos, active } = this.state;
 
@@ -33,7 +27,7 @@ class Carousel extends React.Component {
         <div className="carousel-inner">
           {photos.map((photo,index) => (
             <div className={`carousel-item ${active===index? "active": ""}`} key={index}>
-              <img className="pet-gallery-image d-block w-100" src={photo.value} alt={"slide " + index}/>
+              <img className="pet-gallery-image d-block" src={photo.value} alt={"slide " + index}/>
             </div>
           ))}
         </div>

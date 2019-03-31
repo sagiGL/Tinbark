@@ -15,13 +15,16 @@ class Pet extends React.Component {
         : "https://images.pexels.com/photos/1663421/pexels-photo-1663421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
 
     return (
-      <Link to={`/details/${id}`} className="row pet-item container-fluid alert alert-danger">
-        <div className="col-md-2 ">
+      <Link to={`/details/${id}`} className=" pet-item container-fluid alert alert-danger">
+        <div className="">
           <img className="pet-item-image rounded-circle border " src={photo} alt={name} />
         </div>
-        <div className="col-md-10">
-          <h1 className="pet-name">{name}</h1>
-          <h2>{animal} - {breed} - {location}</h2>
+        <div className="pet-info">
+            <h2 className="pet-name">{name}</h2>
+            <div className="flex-row">
+                <h3 className="pet-breed">{breed}</h3>
+                <h3 className="pet-location">{location}</h3>
+            </div>
         </div>
       </Link>
     );
