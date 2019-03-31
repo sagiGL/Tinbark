@@ -16,7 +16,7 @@ class SearchBox extends Component {
                    aria-expanded="true" aria-controls="search-collapse">
                     🔎
                 </a>
-            <div className="collapse" id='search-collapse'>
+            <div className="collapse show" id='search-collapse'>
           <form className="container-fluid" onSubmit={this.handleFormSubmit}>
             <div className="form-row">
               <div className="form-group col-md-2">
