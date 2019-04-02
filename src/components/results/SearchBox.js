@@ -12,10 +12,10 @@ class SearchBox extends Component {
       <Consumer>
         {context => (
             <div>
-                <a className="btn btn-danger toggle-search-mobile" data-toggle="collapse" href="#search-collapse" role="button"
+                <button className="btn btn-danger toggle-search-mobile" data-toggle="collapse" href="#search-collapse"
                    aria-expanded="true" aria-controls="search-collapse">
-                    🔎
-                </a>
+                   <span role="img" aria-label="search-icon">🔎</span>
+                </button>
             <div className="collapse show" id='search-collapse'>
           <form className="container-fluid" onSubmit={this.handleFormSubmit}>
             <div className="form-row">
@@ -41,7 +41,8 @@ class SearchBox extends Component {
                 </label>
               </div>
               <div className="form-group col-md-2">
-                  <button type="submit" className="btn btn-danger">Search</button>
+                  <button type="submit" className="btn btn-danger" data-toggle="collapse" href="#search-collapse"
+                          aria-expanded="true" aria-controls="search-collapse">Search</button>
               </div>
             </div>
           </form>

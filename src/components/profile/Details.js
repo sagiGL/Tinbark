@@ -70,27 +70,29 @@ class Details extends React.Component {
             {animal} - {breed} - {location}
           </p>
           <p className="pet-description">{description}</p>
-          <button type="button" className="btn btn-danger btn-adopt" data-toggle="modal" data-target="#exampleModalCenter">
-            <h2>YOU WANT ME?</h2>
-          </button>
-          <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog"
-               aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered" role="document">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title" id="exampleModalCenterTitle">Are You Sure?</h5>
-                  <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div className="modal-footer">
-                  <button type="button" className="btn btn-danger" data-dismiss="modal">YES</button>
-                  <button type="button" className="btn btn-danger" data-dismiss="modal">DEFINITELY YES</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+          <div className="adopt-option">
+              <button type="button" className="btn btn-danger btn-adopt" data-toggle="modal" data-target="#exampleModalCenter">
+                  <h2>YOU WANT ME?</h2>
+              </button>
+              <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog"
+                   aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div className="modal-dialog modal-dialog-centered" role="document">
+                      <div className="modal-content">
+                          <div className="modal-header">
+                              <h5 className="modal-title" id="exampleModalCenterTitle">Are You Sure?</h5>
+                              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div className="modal-footer">
+                              <button type="button" className="btn btn-danger" data-dismiss="modal">YES</button>
+                              <button type="button" className="btn btn-danger" data-dismiss="modal">DEFINITELY YES</button>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+          </div>
       </div>
     );
   }

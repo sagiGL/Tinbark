@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 class Pet extends React.Component {
   render() {
-    const { name, animal, breed, media, location, id } = this.props;
+    const { name, breed, media, location, id } = this.props;
 
     let photos =
       media && media.photos && media.photos.photo
@@ -21,10 +21,9 @@ class Pet extends React.Component {
         </div>
         <div className="pet-info">
             <h2 className="pet-name">{name}</h2>
-            <div className="flex-row">
                 <h3 className="pet-breed">{breed}</h3>
-                <h3 className="pet-location">{location}</h3>
-            </div>
+            <h3 className="pet-location"><span role="img" aria-label="location-icon">🌎</span>{location}</h3>
+
         </div>
       </Link>
     );
